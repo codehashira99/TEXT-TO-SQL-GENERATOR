@@ -3,6 +3,8 @@
 WHAT IS THE NEED OF THIS TOOL?
 Non-technical stakeholders (sales managers, marketing teams, product owners) frequently need ad-hoc insights from business databases but lack SQL expertise, creating dependency on data analysts and causing delays in decision-making. Build an AI-powered tool that allows users to query a database using natural language, automatically converting questions into SQL, executing them safely, and returning both raw results and a plain-English summary — eliminating the SQL knowledge barrier for data access.
 
+I have added project demo -- screencast file, that shows working of project.
+
 Query your business database using plain English 
 
 ## Setup
