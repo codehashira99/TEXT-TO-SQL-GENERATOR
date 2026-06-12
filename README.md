@@ -1,6 +1,6 @@
 # Text-to-SQL AI
 
-Query your business database using plain English — powered by Claude.
+Query your business database using plain English 
 
 ## Setup
 
@@ -11,7 +11,7 @@ Query your business database using plain English — powered by Claude.
 
 2. Set your API key:
 ```bash
-   export ANTHROPIC_API_KEY=your_key_here
+   export GROQ_API_KEY=gsk_yourkey
 ```
 
 3. Initialize the database:
