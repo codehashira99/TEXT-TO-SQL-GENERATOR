@@ -1,0 +1,51 @@
+{
+  "database": "Business Analytics DB",
+  "tables": {
+    "customers": {
+      "description": "Stores customer information",
+      "columns": {
+        "customer_id": "Unique customer identifier (integer)",
+        "name": "Full name of the customer",
+        "email": "Customer email address",
+        "city": "City where customer is located",
+        "country": "Country where customer is located",
+        "signup_date": "Date customer registered (YYYY-MM-DD)"
+      }
+    },
+    "products": {
+      "description": "Product catalog with pricing and inventory",
+      "columns": {
+        "product_id": "Unique product identifier (integer)",
+        "name": "Product name",
+        "category": "Product category (Electronics, Furniture, Stationery, Kitchen)",
+        "price": "Current selling price in USD",
+        "stock_quantity": "Units available in inventory"
+      }
+    },
+    "orders": {
+      "description": "Customer orders header information",
+      "columns": {
+        "order_id": "Unique order identifier (integer)",
+        "customer_id": "References customers.customer_id",
+        "order_date": "Date order was placed (YYYY-MM-DD)",
+        "status": "Order status: completed, shipped, cancelled",
+        "total_amount": "Total order value in USD"
+      }
+    },
+    "order_items": {
+      "description": "Individual line items within each order",
+      "columns": {
+        "item_id": "Unique line item identifier",
+        "order_id": "References orders.order_id",
+        "product_id": "References products.product_id",
+        "quantity": "Number of units ordered",
+        "unit_price": "Price per unit at time of order"
+      }
+    }
+  },
+  "relationships": [
+    "orders.customer_id -> customers.customer_id",
+    "order_items.order_id -> orders.order_id",
+    "order_items.product_id -> products.product_id"
+  ]
+}
